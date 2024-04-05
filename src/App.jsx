@@ -24,13 +24,19 @@ function App() {
 
   }
 
+  function removeFromCart(id) {
+    console.log('Eliminando')
+    const updatedCart = cart.filter(item => item.id !== id)
+    setCart(updatedCart)
+  }
+
   useEffect(() => {
     setData(db)
   }, [])
 
   return (
     <>
-    <Header cart={cart}/>
+    <Header cart={cart} removeFromCart={removeFromCart}/>
     <main className="container-xl mt-5">
         <h2 className="text-center">Nuestra Colección</h2>
 

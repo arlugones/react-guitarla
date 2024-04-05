@@ -1,3 +1,5 @@
+import Button from './Button'
+
 function Guitar(props) {
 
     return (
@@ -9,10 +11,7 @@ function Guitar(props) {
                     <h3 className="text-black fs-4 fw-bold text-uppercase">{props.name}</h3>
                     <p>{props.description}</p>
                     <p className="fw-black text-primary fs-3">${props.price}</p>
-                    <button 
-                        type="button"
-                        className="btn btn-dark w-100"
-                    >Agregar al Carrito</button>
+                    <Button />
                 </div>
             </div>
     )
